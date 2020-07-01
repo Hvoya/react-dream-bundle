@@ -9,7 +9,7 @@ const getDuplicatesCheckerWebpackPlugin = require('../plugins/duplicates-checker
  @param {boolean} analyzeMode flag for start bundle-analyzer or not
  @return {Array}
  */
-function getAllPlugins(analyzeMode) {
+function getBasePlugins(analyzeMode) {
   const plugins = [];
   plugins.push(getVueLoaderPlugin());
   plugins.push(getHtmlWebpackPlugin());
@@ -19,4 +19,4 @@ function getAllPlugins(analyzeMode) {
   return plugins;
 }
 
-module.exports = getAllPlugins;
+module.exports = getBasePlugins;

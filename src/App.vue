@@ -1,8 +1,24 @@
 <template>
-  <p>123d</p>
+  <div>
+    <p>123d</p>
+    <img :src="jpg" alt="" />
+    <img :src="png" alt="" />
+    <img :src="svg" alt="" />
+  </div>
 </template>
 <script>
-export default {};
+import jpg from './assets/example.jpg';
+import png from './assets/example.png';
+import svg from './assets/example.svg';
+export default {
+  data() {
+    return {
+      jpg,
+      png,
+      svg,
+    };
+  },
+};
 </script>
 <style>
 p {
