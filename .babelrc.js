@@ -1,6 +1,6 @@
 module.exports = {
   presets: [
-    ["env"],
+    ["env", { modules: false }],
   ],
   comments: false,
 }

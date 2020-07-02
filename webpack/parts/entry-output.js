@@ -9,7 +9,7 @@ function getEntryOutput() {
   return {
     entry: path.resolve(__dirname, '../../src', 'index.js'),
     output: {
-      filename: 'main.js',
+      filename: '[name].[hash].js',
       path: path.resolve(__dirname, '../../build'),
     },
   };

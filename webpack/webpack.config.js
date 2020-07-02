@@ -6,6 +6,5 @@ const prodWebpackConfig = require('./webpack.prod');
 
 const mixin = process.env.NODE_ENV === 'production' ? prodWebpackConfig : devWebpackConfig;
 
-const config = merge(baseWebpackConfig, mixin);
-
+const config = merge.smart(baseWebpackConfig, mixin);
 module.exports = config;

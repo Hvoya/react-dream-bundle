@@ -10,6 +10,7 @@ function getImagminPlugin() {
   return new ImageminPlugin({
     bail: false, // Ignore errors on corrupted images
     cache: true,
+    maxConcurrency: 4,
     imageminOptions: {
       plugins: [
         ['mozjpeg', { progressive: true, quality: 85 }],

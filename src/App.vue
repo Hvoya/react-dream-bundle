@@ -1,10 +1,6 @@
-<template>
-  <div>
-    <p>123d</p>
-    <img :src="jpg" alt="" />
-    <img :src="png" alt="" />
-    <img :src="svg" alt="" />
-  </div>
+<template lang="pug">
+  div
+    h1 Hello world!
 </template>
 <script>
 import jpg from './assets/example.jpg';
