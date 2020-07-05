@@ -11,5 +11,4 @@ function getJsPreset() {
     use: [getBabelLoader()],
   };
 }
-
 module.exports = getJsPreset;

@@ -7,6 +7,7 @@
     "dev": "cross-env NODE_ENV=development webpack-dev-server --config webpack/webpack.config.js",
     "build": "cross-env NODE_ENV=production webpack --config webpack/webpack.config.js",
     "docs:generate": "jsdoc webpack src -d docs -r && cd ./docs && http-server -c-1 -o",
+    "storybook": "start-storybook",
     "analyze-bundle-size": "cross-env NODE_ENV=production analyze=true webpack --config webpack/webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,8 +15,11 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.10.3",
+    "@storybook/vue": "^5.3.19",
     "babel-loader": "^8.1.0",
     "babel-preset-env": "^1.7.0",
+    "babel-preset-vue": "^2.0.2",
+    "brotli-webpack-plugin": "^1.1.0",
     "clean-webpack-plugin": "^3.0.0",
     "cross-env": "^7.0.2",
     "css-loader": "^3.6.0",
@@ -27,6 +31,7 @@
     "eslint-loader": "^4.0.2",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-vue": "^6.2.2",
+    "eslint-plugin-vue-libs": "^4.0.0",
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.3.0",
     "http-server": "^0.12.3",
@@ -52,7 +57,6 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
-    "brotli-webpack-plugin": "^1.1.0",
     "vue": "^2.6.11"
   }
 }

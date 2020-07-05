@@ -11,6 +11,10 @@ function getDevServer() {
     port: 9000,
     hot: true,
     open: true,
+    overlay: {
+      warnings: true,
+      errors: true,
+    },
   };
 }
 
