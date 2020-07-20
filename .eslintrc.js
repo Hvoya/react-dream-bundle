@@ -3,12 +3,12 @@ module.exports = {
     browser: true,
     es2020: true,
   },
-  extends: ['plugin:vue/essential', 'google', 'prettier'],
+  extends: ['plugin:react/recommended', 'google', 'prettier'],
   parserOptions: {
     ecmaVersion: 11,
     sourceType: 'module',
   },
-  plugins: ['vue', 'prettier'],
+  plugins: ['react', 'prettier'],
   rules: {
     'prettier/prettier': ['error'],
   },

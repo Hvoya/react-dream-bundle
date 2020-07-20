@@ -1,7 +1,7 @@
-import Vue from 'vue';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-import App from './App.vue';
+import App from './App';
 
-new Vue({
-  render: (h) => h(App),
-}).$mount('#dream-app');
+const container = document.getElementById('dream-app');
+ReactDOM.render(<App />, container);

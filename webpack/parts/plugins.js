@@ -1,4 +1,3 @@
-const getVueLoaderPlugin = require('../plugins/vue-loader-plugin');
 const getHtmlWebpackPlugin = require('../plugins/html-webpack-plugin');
 const getBundleAnalyzerPlugin = require('../plugins/bundle-analyzer-plugin');
 const getDuplicatesCheckerWebpackPlugin = require('../plugins/duplicates-checker-webpack-plugin');
@@ -11,7 +10,6 @@ const getDuplicatesCheckerWebpackPlugin = require('../plugins/duplicates-checker
  */
 function getBasePlugins(analyzeMode) {
   const plugins = [];
-  plugins.push(getVueLoaderPlugin());
   plugins.push(getHtmlWebpackPlugin());
   plugins.push(getDuplicatesCheckerWebpackPlugin());
   if (analyzeMode) plugins.push(getBundleAnalyzerPlugin());

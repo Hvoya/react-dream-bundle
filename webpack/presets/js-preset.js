@@ -7,7 +7,8 @@ const getBabelLoader = require('../loaders/babel-loader');
  */
 function getJsPreset() {
   return {
-    test: /\.js$/,
+    test: /\.(js|jsx)$/,
+    exclude: '/node_modules/',
     use: [getBabelLoader()],
   };
 }

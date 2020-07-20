@@ -8,7 +8,7 @@ const getEslintLoader = require('../loaders/eslint-loader');
 function getLintPreset() {
   return {
     enforce: 'pre',
-    test: /\.(js|vue)$/,
+    test: /\.(js|jsx)$/,
     use: [getEslintLoader()],
   };
 }

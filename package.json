@@ -1,24 +1,32 @@
 {
-  "name": "vue-dream-bundle",
+  "name": "react-dream-bundle",
   "version": "0.0.1",
-  "description": "Dream bundle boilerplate for vue project",
+  "description": "Dream bundle boilerplate for react project",
   "main": "index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --config webpack/webpack.config.js",
     "build": "cross-env NODE_ENV=production webpack --config webpack/webpack.config.js",
     "docs:generate": "jsdoc webpack src -d docs -r && cd ./docs && http-server -c-1 -o",
     "storybook": "start-storybook",
-    "analyze-bundle-size": "cross-env NODE_ENV=production analyze=true webpack --config webpack/webpack.config.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "analyze-bundle-size": "cross-env NODE_ENV=production analyze=true webpack --config webpack/webpack.config.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js?(x)": ["eslint --fix"]
   },
   "author": "https://github.com/Hvoya",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.10.3",
-    "@storybook/vue": "^5.3.19",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-react": "^7.10.4",
+    "@storybook/react": "^5.3.19",
     "babel-loader": "^8.1.0",
     "babel-preset-env": "^1.7.0",
-    "babel-preset-vue": "^2.0.2",
     "brotli-webpack-plugin": "^1.1.0",
     "clean-webpack-plugin": "^3.0.0",
     "cross-env": "^7.0.2",
@@ -30,8 +38,7 @@
     "eslint-config-prettier": "^6.11.0",
     "eslint-loader": "^4.0.2",
     "eslint-plugin-prettier": "^3.1.4",
-    "eslint-plugin-vue": "^6.2.2",
-    "eslint-plugin-vue-libs": "^4.0.0",
+    "eslint-plugin-react": "^7.20.3",
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.3.0",
     "http-server": "^0.12.3",
@@ -44,12 +51,7 @@
     "lint-staged": "^10.2.11",
     "mini-css-extract-plugin": "^0.9.0",
     "prettier": "^2.0.5",
-    "pug": "^3.0.0",
-    "pug-plain-loader": "^1.0.0",
     "uglifyjs-webpack-plugin": "^2.2.0",
-    "vue-loader": "^15.9.3",
-    "vue-style-loader": "^4.1.2",
-    "vue-template-compiler": "^2.6.11",
     "webpack": "^4.43.0",
     "webpack-bundle-analyzer": "^3.8.0",
     "webpack-cli": "^3.3.12",
@@ -57,6 +59,7 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
-    "vue": "^2.6.11"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   }
 }
