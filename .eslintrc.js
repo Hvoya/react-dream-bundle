@@ -8,6 +8,11 @@ module.exports = {
     ecmaVersion: 11,
     sourceType: 'module',
   },
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
   plugins: ['react', 'prettier'],
   rules: {
     'prettier/prettier': ['error'],

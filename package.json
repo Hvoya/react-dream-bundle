@@ -8,7 +8,8 @@
     "build": "cross-env NODE_ENV=production webpack --config webpack/webpack.config.js",
     "docs:generate": "jsdoc webpack src -d docs -r && cd ./docs && http-server -c-1 -o",
     "storybook": "start-storybook",
-    "analyze-bundle-size": "cross-env NODE_ENV=production analyze=true webpack --config webpack/webpack.config.js"
+    "analyze-bundle-size": "cross-env NODE_ENV=production analyze=true webpack --config webpack/webpack.config.js",
+    "lint": "eslint *.js?(x)"
   },
   "husky": {
     "hooks": {
